@@ -2,7 +2,6 @@ import json
 import random
 from backend.addNumberSearches import addNumberSearches
 from backend.getIdArtist import getIdArtist
-from backend.getIdDiscography import getIdDiscography
 from backend.getLyricsTrack import getLyricsTrack
 from backend.getTracksAlbum import getTracksAlbum
 from backend.getYTLink import getYTLink

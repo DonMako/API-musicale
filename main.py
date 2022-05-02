@@ -1,6 +1,6 @@
 from typing import Optional
 from fastapi import FastAPI
-from backend.getTrack import getTrack
+from backend.getRandomTrackArtist import getRandomTrackArtist
 
 app = FastAPI()
 
@@ -12,4 +12,4 @@ def read_root():
 
 @app.get("/random/{artist_name}")
 def get_all_words(artist_name: Optional[str]):
-    return getTrack(artist_name)
+    return getRandomTrackArtist(artist_name)
