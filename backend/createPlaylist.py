@@ -1,6 +1,6 @@
 import json
-import random
 from backend.addNumberSearches import addNumberSearches
+from backend.getIdArtist import getIdArtist
 from backend.getRandomTrackArtist import getRandomTrackArtist
 from backend.getLyricsTrack import getLyricsTrack
 from backend.getYTLink import getYTLink
@@ -14,7 +14,6 @@ def createPlaylist(len_playlist: int, file: json):
             track = getRandomTrackArtist(artist["artiste"])
             if track not in list_tracks_selected:
                 list_tracks_selected.append(track["title"])
-        playlist = playlist + list_tracks_selected
     playlist = []
     for artiste in file:
         for piste in artiste["liste_pistes"]:
