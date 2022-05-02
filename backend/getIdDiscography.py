@@ -1,12 +1,13 @@
 import requests
 
 
-def getIdDiscography(idArtist: int):
+def getIdDiscography(id_artist: int):
     requete = requests.get(
         "https://theaudiodb.com/api/v1/json/{APIKEY}/album.php?i=" + str(
-			idArtist))
+            id_artist)
+    )
     liste_info_album = requete["album"]
-    liste_id = []
+    list_id_albums = []
     for i in len(liste_info_album):
-		liste_id.append(liste_info_album[i]["idAlbum"])
-	return liste_id
+        list_id_albums.append(liste_info_album[i]["idAlbum"])
+    return list_id_albums

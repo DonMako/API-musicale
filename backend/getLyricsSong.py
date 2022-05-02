@@ -1,8 +1,8 @@
 import requests
 
 
-def recup_lyrics(nom_artiste: str, title: str):
+def getLyricsSong(name_artist: str, title: str):
     requete = requests.get(
-        "https://api.lyrics.ovh/v1/" + str(nom_artiste) + "/" + str(title)
+        "https://api.lyrics.ovh/v1/" + name_artist + "/" + title
     )
     return requete["lyrics"]
