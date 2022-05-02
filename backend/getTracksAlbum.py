@@ -9,8 +9,8 @@ def getTracksAlbum(id_album: int):
     )
     list_info_tracks = requete["track"]
     for j in len(list_info_tracks):
-      dico = {}
-      dico["id_Track"] = list_info_tracks[j]["idTrack"]
-      dico["title"] = list_info_tracks[j]["strTrack"]
-      list_tracks.append(dico)
+        dico = {}
+        dico["id_Track"] = list_info_tracks[j]["idTrack"]
+        dico["title"] = list_info_tracks[j]["strTrack"]
+        list_tracks.append(dico)
     return list_tracks
