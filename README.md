@@ -1,6 +1,7 @@
 # Schéma d'architecture
 
-graph TD
+```mermaid
+flowchart LR
     A(User) -->|json| B(Client)
     B -->|json| A
     B -->|HTTPS requests| C{API-musicale}
@@ -8,3 +9,13 @@ graph TD
     C -->|HTTPS requests| E(LyricsOvh)
     D -->|HTTPS requests| C
     E -->|HTTPS requests| C
+```
+
+# Installation
+
+```
+git clone https://github.com/DonMako/API-musicale
+cd APi-musicale
+pip install -r requirements.txt
+python main.py
+```
