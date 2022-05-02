@@ -1,5 +1,5 @@
 import json
-from backend.totalScore import totalScore
+from frontend.totalScore import totalScore
 
 
 def addNumberSearches(file: json, len_playlist: int) -> None:
