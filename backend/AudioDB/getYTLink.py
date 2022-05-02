@@ -1,5 +1,5 @@
 import requests
-from backend.getIdArtist import getIdArtist
+from backend.AudioDB.getIdArtist import getIdArtist
 
 
 def getYTLink(name_artist: str, id_track: int) -> str:
@@ -9,8 +9,8 @@ def getYTLink(name_artist: str, id_track: int) -> str:
             id_artist)
     )
     liste_liens = requete["mvids"]
-    for i in len(liste_liens):
-        if liste_liens["idTrack"] == id_track:
-            return liste_liens["strMusicVid"]
+    for lien in liste_liens:
+        if lien["idTrack"] == id_track:
+            return lien["strMusicVid"]
         else:
             return "Pas de lien YT pour cette musique"

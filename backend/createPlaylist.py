@@ -2,9 +2,9 @@ import json
 from typing import List
 from backend.addNumberSearches import addNumberSearches
 from backend.selectSongsFromFile import selectSongsFromFile
-from backend.getYTLink import getYTLink
-from backend.getIdArtist import getIdArtist
-from backend.getLyricsSong import getLyricsSong
+from backend.AudioDB.getYTLink import getYTLink
+from backend.AudioDB.getIdArtist import getIdArtist
+from backend.LyricsOvh.getLyricsSong import getLyricsSong
 
 
 def createPlaylist(file: json, len_playlist: int) -> List[dict]:

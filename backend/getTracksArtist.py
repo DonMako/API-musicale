@@ -1,7 +1,7 @@
 from typing import List
-from backend.getIdArtist import getIdArtist
-from backend.getIdDiscography import getIdDiscography
-from backend.getTracksAlbum import getTracksAlbum
+from backend.AudioDB.getIdArtist import getIdArtist
+from backend.AudioDB.getIdDiscography import getIdDiscography
+from backend.AudioDB.getTracksAlbum import getTracksAlbum
 
 
 def getTracksArtist(name_artist: str) -> List[dict]:
