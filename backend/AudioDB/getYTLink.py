@@ -1,9 +1,7 @@
 import requests
-from backend.AudioDB.getIdArtist import getIdArtist
 
 
-def getYTLink(name_artist: str, id_track: int) -> str:
-    id_artist = getIdArtist(name_artist)
+def getYTLink(id_artist: int, id_track: int) -> str:
     requete = requests.get(
         "https://theaudiodb.com/api/v1/json/{APIKEY}/mvid.php?i=" + str(
             id_artist)
