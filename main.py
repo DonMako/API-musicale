@@ -1,6 +1,6 @@
 from typing import Optional
 from fastapi import FastAPI
-from backend.getRandomTrackArtist import getRandomTrackArtist
+from frontend.getRandomTrackArtist import getRandomTrackArtist
 
 app = FastAPI()
 

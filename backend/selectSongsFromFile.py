@@ -1,7 +1,7 @@
 import json
 from typing import List
 from backend.AudioDB.getIdArtist import getIdArtist
-from backend.getRandomTrackArtist import getRandomTrackArtist
+from frontend.getRandomTrackArtist import getRandomTrackArtist
 
 
 def selectSongsFromFile(file: json) -> List[dict]:
