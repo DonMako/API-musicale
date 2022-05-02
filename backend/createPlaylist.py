@@ -1,4 +1,5 @@
 import json
+from typing import List
 from backend.addNumberSearches import addNumberSearches
 from backend.selectSongsFromFile import selectSongsFromFile
 from backend.getYTLink import getYTLink
@@ -6,7 +7,7 @@ from backend.getIdArtist import getIdArtist
 from backend.getLyricsSong import getLyricsSong
 
 
-def createPlaylist(file: json, len_playlist: int):
+def createPlaylist(file: json, len_playlist: int) -> List[dict]:
     addNumberSearches(file, len_playlist)
     playlist, list_songs = [], selectSongsFromFile(file)
     for song in list_songs:

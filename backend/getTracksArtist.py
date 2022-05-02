@@ -1,9 +1,10 @@
+from typing import List
 from backend.getIdArtist import getIdArtist
 from backend.getIdDiscography import getIdDiscography
 from backend.getTracksAlbum import getTracksAlbum
 
 
-def getTracksArtist(name_artist: str):
+def getTracksArtist(name_artist: str) -> List[dict]:
     id_artist = getIdArtist(name_artist)
     list_id_albums = getIdDiscography(id_artist)
     list_tracks = []

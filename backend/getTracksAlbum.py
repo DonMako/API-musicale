@@ -1,7 +1,8 @@
 import requests
+from typing import List
 
 
-def getTracksAlbum(id_album: int):
+def getTracksAlbum(id_album: int) -> List[dict]:
     list_tracks = []
     requete = requests.get(
         "https://theaudiodb.com/api/v1/json/{APIKEY}/track.php?m=" + str(
