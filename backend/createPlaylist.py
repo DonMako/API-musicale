@@ -1,28 +1,21 @@
 import json
 from backend.addNumberSearches import addNumberSearches
-from backend.getIdArtist import getIdArtist
-from backend.getRandomTrackArtist import getRandomTrackArtist
-from backend.getLyricsTrack import getLyricsTrack
+from backend.selectSongsFromFile import selectSongsFromFile
 from backend.getYTLink import getYTLink
+from backend.getIdArtist import getIdArtist
+from backend.getLyricsSong import getLyricsSong
 
 
-def createPlaylist(len_playlist: int, file: json):
-    addNumberSearches(len_playlist, file)
-    for artist in file:
-        list_tracks_selected = []
-        for i in artist["numberSearches"]:
-            track = getRandomTrackArtist(artist["artiste"])
-            if track not in list_tracks_selected:
-                list_tracks_selected.append(track["title"])
-    playlist = []
-    for artiste in file:
-        for piste in artiste["liste_pistes"]:
-            chanson = {}
-            chanson["artist"] = artiste["artiste"]
-            chanson["title"] = piste["titre"]
-            chanson["suggested_youtube_url"] = getYTLink(
-                getIdArtist(artiste["artiste"]), piste["idTrack"])
-            chanson["lyrics"] = getLyricsTrack(
-                artiste["artiste"], piste["titre"])
-            playlist.append(chanson)
+def createPlaylist(file: json, len_playlist: int):
+    addNumberSearches(file, len_playlist)
+    playlist, list_songs = [], selectSongsFromFile(file)
+    for song in list_songs:
+        dico = {}
+        dico["artist"] = song["name_artist"]
+        dico["title"] = song["title"]
+        dico["suggested_youtube_url"] = getYTLink(
+            getIdArtist(song["name_artist"]), song["id_track"])
+        dico["lyrics"] = getLyricsSong(
+            song["name_artist"], song["title"])
+        playlist.append(dico)
     return playlist

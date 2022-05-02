@@ -2,7 +2,7 @@ import json
 from backend.totalScore import totalScore
 
 
-def addNumberSearches(len_playlist: int, file: json):
+def addNumberSearches(file: json, len_playlist: int):
     total_score = totalScore(file)
     for i in len(file):
         file[i]["numberSearches"] = round(
