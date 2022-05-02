@@ -2,7 +2,7 @@
 
 ```mermaid
 flowchart LR
-    A(User) -->|(json, int)| B(Client)
+    A(User) -->|json, int| B(Client)
     B -->|json| A
     B -->|HTTPS requests| C{API-musicale}
     C -->|HTTPS requests| D(AudioDB)
