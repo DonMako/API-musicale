@@ -1,6 +1,6 @@
 import json
 from typing import List
-from frontend.addNumberSearches import addNumberSearches
+from backend.addNumberSearches import addNumberSearches
 from backend.selectSongsFromFile import selectSongsFromFile
 from backend.AudioDB.getYTLink import getYTLink
 from backend.AudioDB.getIdArtist import getIdArtist
