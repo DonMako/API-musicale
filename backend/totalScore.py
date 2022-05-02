@@ -1,8 +1,5 @@
-import json
-
-
-def totalScore(file: json) -> int:
+def totalScore(data: dict) -> int:
     total = 0
-    for i in range(len(file)):
-        total += file[i]["note"]
+    for i in range(len(data)):
+        total += data[i]["note"]
     return total
