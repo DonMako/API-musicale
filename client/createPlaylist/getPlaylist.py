@@ -1,10 +1,11 @@
 import json
-from client.totalScore import totalScore
-from client.addNumberSearches import addNumberSearches
-from APIMusicale.main import getRandomTrackArtist
+import requests
+from typing import List
+from client.createPlaylist.totalScore import totalScore
+from client.createPlaylist.addNumberSearches import addNumberSearches
 
 
-def getPlaylist(file: json, len_playlist: int) -> None:
+def getPlaylist(file: json, len_playlist: int) -> List[dict]:
     with open(str(file), "r") as read_file:
         data = json.load(read_file)
     total_score = totalScore(data)
@@ -12,7 +13,9 @@ def getPlaylist(file: json, len_playlist: int) -> None:
     playlist = []
     for artist in data:
         for i in range(artist["numberSearches"]):
-            track = getRandomTrackArtist(artist["artiste"])
+            track = requests.get(
+                "http://127.0.0.1:8000/random/" + artist["artiste"]
+            )
             playlist.append(track)
     data_file = open("playlist.json", "w")
     json.dump(playlist, data_file, indent="")
