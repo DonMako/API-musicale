@@ -16,15 +16,16 @@ The project consists of the realization of a musical API, which is based on the 
 
 This musical API is able to:
 * randomly get the song of a given artist as input
-* create a playlist of _x_ songs from a file following the pattern of the _rudy.py_ file, with _x_ a number chose by the user.
+* create a playlist of _x_ songs from a file following the pattern of the _rudy.json_ file, with _x_ a number chose by the user.
 
-## Installation
+## Quick Start
 
 ```
 git clone https://github.com/DonMako/API-musicale
 cd API-musicale
 pip install -r requirements.txt
-python getPlaylist.py
+
+python main.py
 ```
 
 ## Simple macro architecture diagram of the application
