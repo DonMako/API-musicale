@@ -34,4 +34,4 @@ def getRandomTrackArtist(name_artist: str) -> List[dict]:
 
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="localhost", port="5000")
+    uvicorn.run(app)
