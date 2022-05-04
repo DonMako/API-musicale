@@ -1,5 +1,4 @@
 import json
-import requests
 from client.totalScore import totalScore
 from client.addNumberSearches import addNumberSearches
 from APIMusicale.main import getRandomTrackArtist
