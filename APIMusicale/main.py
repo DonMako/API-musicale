@@ -1,6 +1,7 @@
 import random
 from typing import List
 from fastapi import FastAPI
+import uvicorn
 from APIMusicale.AudioDB.getIdArtist import getIdArtist
 from APIMusicale.AudioDB.getIdDiscography import getIdDiscography
 from APIMusicale.AudioDB.getTracksAlbum import getTracksAlbum
@@ -30,3 +31,7 @@ def getRandomTrackArtist(name_artist: str) -> List[dict]:
         del track["id_track"]
     random_number = random.randint(0, len(list_tracks) - 1)
     return list_tracks[random_number]
+
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="localhost", port="5000")
