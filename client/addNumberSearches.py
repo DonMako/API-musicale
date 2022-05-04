@@ -1,12 +1,7 @@
-import json
 from typing import List
-from client.totalScore import totalScore
 
 
-def addNumberSearches(file: json, len_playlist: int) -> List[dict]:
-    with open(str(file), "r") as read_file:
-        data = json.load(read_file)
-    total_score = totalScore(data)
+def addNumberSearches(data: List[dict], total_score: int, len_playlist: int):
     for dico in data:
         dico["numberSearches"] = round(
             dico["note"]/total_score*len_playlist)
