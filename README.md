@@ -54,3 +54,14 @@ flowchart LR
     D -->|HTTPS response| C
     E -->|HTTPS response| C
 ```
+
+## To run some tests
+
+For the moment, only one test is coded into the project.
+
+To run this test:
+
+```
+cd tests
+python testAPI.py
+```
