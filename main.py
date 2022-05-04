@@ -1,7 +1,6 @@
-import random
 from typing import Optional
 from fastapi import FastAPI
-from APIMusicale.main import getTracksArtist
+from APIMusicale.main import getRandomTrackArtist
 
 app = FastAPI()
 
@@ -12,7 +11,5 @@ def read_root() -> dict:
 
 
 @app.get("/random/{name_artist}")
-def getRandomTrackArtist(name_artist: Optional[str]) -> dict:
-    list_tracks = getTracksArtist(name_artist)
-    random_number = random.randint(0, len(list_tracks) - 1)
-    return list_tracks[random_number]
+def getTrackArtist(name_artist: Optional[str]) -> dict:
+    return getRandomTrackArtist(name_artist)
