@@ -1,11 +1,18 @@
 import random
 from typing import List
+from fastapi import FastAPI
 from APIMusicale.AudioDB.getIdArtist import getIdArtist
 from APIMusicale.AudioDB.getIdDiscography import getIdDiscography
 from APIMusicale.AudioDB.getTracksAlbum import getTracksAlbum
 from APIMusicale.AudioDB.getYTLink import getYTLink
 from APIMusicale.LyricsOvh.getLyricsSong import getLyricsSong
 
+app = FastAPI()
+
+
+@app.get("/")
+def read_root() -> dict:
+    return {"message": "Salut, monde !"}
 
 def getRandomTrackArtist(name_artist: str) -> List[dict]:
     id_artist = getIdArtist(name_artist)
@@ -21,3 +28,8 @@ def getRandomTrackArtist(name_artist: str) -> List[dict]:
         del track["id_track"]
     random_number = random.randint(0, len(list_tracks) - 1)
     return list_tracks[random_number]
+
+@app.get("/random/{name_artist}")
+def getTrackArtist(name_artist: str) -> dict:
+    return getRandomTrackArtist(name_artist)
+
