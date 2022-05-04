@@ -1,7 +1,7 @@
 import random
 from typing import Optional
 from fastapi import FastAPI
-from backend.getTracksArtist import getTracksArtist
+from APIMusicale.getTracksArtist import getTracksArtist
 
 app = FastAPI()
 
