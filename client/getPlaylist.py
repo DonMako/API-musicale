@@ -12,7 +12,7 @@ def getPlaylist(file: json, len_playlist: int) -> None:
     playlist = []
     for artist in data:
         for i in range(artist["numberSearches"]):
-            requete = requests.get(os.getenv("url_server")+"/random/"+artist['artiste']).json()
+            requete = requests.get()
             playlist.append(requete)
     data_file = open("playlist.json", "w")
     json.dump(playlist, data_file, indent="")

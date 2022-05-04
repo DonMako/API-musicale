@@ -2,7 +2,7 @@
 
 # What is an API-musicale ?
 
-You want to sing in Musikam, the biggest french karaoke-club, but you don't know what songs to perform ?
+You live in Rennes and you want to sing in Musikam, the biggest french karaoke-club, but you don't know what songs to perform ?
 
 Don't worry, the API-musicale is here for **you** !
 

@@ -2,6 +2,8 @@ from typing import List
 from APIMusicale.AudioDB.getIdArtist import getIdArtist
 from APIMusicale.AudioDB.getIdDiscography import getIdDiscography
 from APIMusicale.AudioDB.getTracksAlbum import getTracksAlbum
+from APIMusicale.AudioDB.getYTLink import getYTLink
+from APIMusicale.LyricsOvh.getLyricsSong import getLyricsSong
 
 
 def getTracksArtist(name_artist: str) -> List[dict]:
@@ -10,4 +12,10 @@ def getTracksArtist(name_artist: str) -> List[dict]:
     list_tracks = []
     for id_album in list_id_albums:
         list_tracks = list_tracks + getTracksAlbum(id_album)
+    for track in list_tracks:
+        track["name_artist"] = name_artist
+        track["suggested_youtube_url"] = getYTLink(
+            id_artist, track["id_track"])
+        track["lyrics"] = getLyricsSong(name_artist, track["title"])
+        del track["id_track"]
     return list_tracks

@@ -6,7 +6,7 @@ def getTracksAlbum(id_album: int) -> List[dict]:
     requete = requests.get(
         "https://theaudiodb.com/api/v1/json/{APIKEY}/track.php?m=" + str(
             id_album)
-    )
+    ).json()
     list_info_tracks = requete["track"]
     list_tracks = []
     for track in list_info_tracks:
