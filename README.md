@@ -64,7 +64,6 @@ flowchart LR
 For the moment, only one test is coded into the project.
 
 To run this test:
-
 ```
 cd tests
 python testAPI.py
