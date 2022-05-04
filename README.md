@@ -20,11 +20,15 @@ This musical API is able to:
 
 ## Quick Start
 
+### Installation
 ```
 git clone https://github.com/DonMako/API-musicale
 cd API-musicale
 pip install -r requirements.txt
+```
 
+### Running the application
+```
 python main.py
 ```
 
@@ -34,7 +38,7 @@ _Rudy wants to have a karaoke night with friends. The evening starts soon and th
 Rudy having done a national school of statistics and information analysis, he prepared a JSON file containing the names of his favorite artists.
 He now wants to generate a playlist of 20 songs from this file._
 
-#### To launch the scenario used as an example:
+#### To launch this scenario:
 
 ```
 python main.py
