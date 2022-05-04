@@ -1,6 +1,6 @@
 import json
 from typing import List
-from backend.AudioDB.getIdArtist import getIdArtist
+from APIMusicale.AudioDB.getIdArtist import getIdArtist
 from client.getRandomTrackArtist import getRandomTrackArtist
 
 

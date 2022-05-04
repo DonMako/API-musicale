@@ -1,5 +1,8 @@
-def totalScore(data: dict) -> int:
+from typing import List
+
+
+def totalScore(data: List[dict]) -> int:
     total = 0
-    for i in range(len(data)):
-        total += data[i]["note"]
+    for dico in data:
+        total += dico["note"]
     return total
