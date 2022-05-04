@@ -3,7 +3,7 @@ from unittest import TestCase
 from APIMusicale.AudioDB.getIdArtist import getIdArtist
 
 
-class TestPlaylist(TestCase):
+class TestAPI(TestCase):
 
     def testGetIdArtist(self):
         id_artiste = getIdArtist("Rammstein")
