@@ -1,5 +1,5 @@
 import json
-from backend.createPlaylist import createPlaylist
+from APIMusicale.createPlaylist import createPlaylist
 
 
 def getPlaylist(file: json, len_playlist: int) -> None:
