@@ -1,3 +1,4 @@
+import json
 import requests
 from typing import List
 
@@ -7,7 +8,8 @@ def getTracksAlbum(id_album: int) -> List[dict]:
         "https://theaudiodb.com/api/v1/json/{APIKEY}/track.php?m=" + str(
             id_album)
     ).json()
-    list_info_tracks = requete["track"]
+    data = json.load(open(requete, "r"))
+    list_info_tracks = data["track"]
     list_tracks = []
     for track in list_info_tracks:
         dico = {}
