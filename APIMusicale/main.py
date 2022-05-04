@@ -2,11 +2,11 @@ import random
 from typing import List
 from fastapi import FastAPI
 import uvicorn
-from APIMusicale.AudioDB.getIdArtist import getIdArtist
-from APIMusicale.AudioDB.getIdDiscography import getIdDiscography
-from APIMusicale.AudioDB.getTracksAlbum import getTracksAlbum
-from APIMusicale.AudioDB.getYTLink import getYTLink
-from APIMusicale.LyricsOvh.getLyricsSong import getLyricsSong
+from AudioDB.getIdArtist import getIdArtist
+from AudioDB.getIdDiscography import getIdDiscography
+from AudioDB.getTracksAlbum import getTracksAlbum
+from AudioDB.getYTLink import getYTLink
+from LyricsOvh.getLyricsSong import getLyricsSong
 
 app = FastAPI()
 

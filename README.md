@@ -28,6 +28,12 @@ pip install -r requirements.txt
 ```
 
 ### Running the application
+First, run the API.
+```
+cd APIMusicale
+python main.py
+```
+Then, in an other terminal:
 ```
 python main.py
 ```
@@ -39,11 +45,7 @@ Rudy having done a national school of statistics and information analysis, he pr
 He now wants to generate a playlist of 20 songs from this file._
 
 #### To launch this scenario:
-
-```
-python main.py
-3
-```
+Simply run the application, and select the option ```Lauch the 'Rudy' scenario``` in the menu.
 
 ## Simple macro architecture diagram of the application
 
