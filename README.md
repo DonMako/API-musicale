@@ -38,15 +38,6 @@ Then, in an other terminal:
 python main.py
 ```
 
-### The 'Rudy' scenario
-
-_Rudy wants to have a karaoke night with friends. The evening starts soon and the playlist is not ready! In addition, Rudy has very specific musical tastes, he only likes certain artists. Rudy therefore wishes to automatically generate a playlist of music with lyrics only composed of music from his favorite artists.
-Rudy having done a national school of statistics and information analysis, he prepared a JSON file containing the names of his favorite artists.
-He now wants to generate a playlist of 20 songs from this file._
-
-#### To launch this scenario:
-Simply run the application, and select the option ```Lauch the 'Rudy' scenario``` in the menu.
-
 ## Simple macro architecture diagram of the application
 
 ```mermaid
