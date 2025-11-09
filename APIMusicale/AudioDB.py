@@ -18,3 +18,17 @@ def getIdArtist(name_artist: str) -> int:
         "https://theaudiodb.com/api/v1/json/2/search.php?s=" + name_artist
     ).json()
     return requete["artists"][0]["idArtist"]
+    
+def getTracksAlbum(id_album: int) -> List[dict]:
+    requete = requests.get(
+        "https://theaudiodb.com/api/v1/json/{APIKEY}/track.php?m=" + str(
+            id_album)
+    ).json()
+    list_info_tracks = requete["track"]
+    list_tracks = []
+    for track in list_info_tracks:
+        dico = {}
+        dico["id_track"] = track["idTrack"]
+        dico["title"] = track["strTrack"]
+        list_tracks.append(dico)
+    return list_tracks
