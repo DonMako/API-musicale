@@ -41,19 +41,15 @@ python main.py
 ## Simple macro architecture diagram of the application
 
 ```mermaid
-  info
-```
-
-```mermaid
-flowchart LR
-    A(User) -->|json, int| B(Client)
-    B -->|json| A
-    B -->|HTTPS requests| C{API-musicale}
-    C -->|HTTPS response| B
-    C -->|HTTPS requests| D(AudioDB)
-    C -->|HTTPS requests| E(LyricsOvh)
-    D -->|HTTPS response| C
-    E -->|HTTPS response| C
+flowchart LR;
+    A(User) -->|json, int| B(Client);
+    B -->|json| A;
+    B -->|HTTPS requests| C{API-musicale};
+    C -->|HTTPS response| B;
+    C -->|HTTPS requests| D(AudioDB);
+    C -->|HTTPS requests| E(LyricsOvh);
+    D -->|HTTPS response| C;
+    E -->|HTTPS response| C;
 ```
 
 ## To run some tests
