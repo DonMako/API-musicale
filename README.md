@@ -41,6 +41,10 @@ python main.py
 ## Simple macro architecture diagram of the application
 
 ```mermaid
+  info
+```
+
+```mermaid
 flowchart LR
     A(User) -->|json, int| B(Client)
     B -->|json| A
